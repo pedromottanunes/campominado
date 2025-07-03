@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Campo Minado História – Alianças na 2.ª Guerra</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Campo Minado – Alianças (9.º Ano)</h1>
+    <p>Cada grupo revela casas e responde: <strong>Aliado</strong> ou <strong>Eixo</strong>. Errou = BOOM!</p>
+  </header>
+
+  <main>
+    <section id="scoreBoard">
+      <h2>Placar</h2>
+      <div id="teams"></div>
+      <button id="addTeamBtn">+ Adicionar Grupo</button>
+    </section>
+
+    <section id="gameArea">
+      <div id="grid" class="grid"></div>
+    </section>
+  </main>
+
+  <footer>© 2025 – Ensino Lúdico de História</footer>
+
+  <dialog id="questionDialog">
+    <form method="dialog" id="questionForm">
+      <p id="questionText"></p>
+      <div class="answers">
+        <button value="Allies">Aliados</button>
+        <button value="Axis">Eixo</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="gameOverDialog">
+    <p id="gameOverMsg"></p>
+    <button id="restartBtn">Reiniciar Jogo</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
