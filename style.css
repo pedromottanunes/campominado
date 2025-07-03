@@ -31,6 +31,10 @@ main {
   grid-template-columns: 240px 1fr;
   gap: 1.5rem;
   padding: 1.5rem;
+
+   /* NOVO – altura exata da área útil                           */
+  height: calc(100vh - 160px);        /* 160 px ≈ header (80) + footer (80)  */
+  align-items: center;                /* centraliza verticalmente            */
 }
 
 #scoreBoard, #gameArea {
@@ -77,6 +81,15 @@ main {
   grid-template-columns: repeat(8, 1fr);
   gap: .25rem;
   user-select: none;
+
+/* NOVO – garante que a grade nunca ultrapasse a janela */
+  width: 80vmin;                      /* 80 % da menor dimensão da tela      */
+  height: 80vmin;                     /* mantém 1:1 → sem barra de rolagem   */
+  max-width: calc(100vw - 300px);     /* reserva ~240 px do placar + gaps    */
+  max-height: calc(100vh - 200px);    /* reserva header/footer + paddings    */
+
+  margin: auto;                       /* centraliza dentro de #gameArea      */
+  
 }
 .tile {
   background: var(--tile);
